@@ -34,12 +34,14 @@ FailedRequest::FailedRequest(string month, double days, string time, string ip, 
     double ipNumber4 = stoi(ipCopy.substr(0, pos));
     ipCopy.erase(0,pos+1);
 
+    double port = stoi(ipCopy);
 
     this->ipSortValue = 0;
     this->ipSortValue += ipNumber1;  
     this->ipSortValue += ipNumber2/1000.00;
     this->ipSortValue += ipNumber3/1000000.00;
     this->ipSortValue += ipNumber4/1000000000.00;
+    this->ipSortValue += port/10000000000000.00;
 }
 //Complejidad O(1)
 double FailedRequest::getDay(){

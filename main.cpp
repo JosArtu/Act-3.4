@@ -23,7 +23,6 @@ int main(){
         cout << "Top IPs (0 = terminar): ";
         cin >> n;
         system1.searchTopIPs(n);
-
     }
     while(n != 0);
     
