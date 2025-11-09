@@ -1,6 +1,6 @@
 #include "SearchSystem.h"
 #include <iostream>
-
+//Complejidad: Mejor de los casos: O(log n), peor de los casos: O(n)
 SearchSystem::SearchSystem(MyLinkedList* bitacora): bitacora(bitacora){
     int accessRepetitions = 1;
     int pos;
@@ -32,11 +32,12 @@ SearchSystem::SearchSystem(MyLinkedList* bitacora): bitacora(bitacora){
         currentNodeLL = currentNodeLL->next;
     }
 }
-
+//Complejidad: O(1)
 SearchSystem::~SearchSystem(){
     delete searchTree;
 }
-
+//Complejidad: O(n, N), donde la n es la cantidad de top IPs que se piden y  la N seria los nodos del arbol, cuando el usuario pone 
+// n > N, solo va recorrer hasta N y no llenara la lista, solo pondra todos los nodos del arbol en la lista.
 void SearchSystem::searchRequests(int n){
     if (n > bitacora->length()){
         n = bitacora->length();
@@ -44,7 +45,7 @@ void SearchSystem::searchRequests(int n){
     MyLinkedList* lista = searchTree->getTopAccessIP(n);
     printRequests(lista);
 }
-
+//Complejidad: O(n)
 void SearchSystem::printRequests(MyLinkedList* list){
     MyNodoLL* current;
     int lenght = list->length();

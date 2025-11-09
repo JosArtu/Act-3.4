@@ -12,6 +12,7 @@ MyLinkedList::MyLinkedList(){
     this->head = nullptr;
     this->tail = nullptr;
 }
+//Complejidad: O(1)
 MyLinkedList::MyLinkedList(int len):lens(len){
     this->size = 0;
     this->head = nullptr;
@@ -32,7 +33,7 @@ MyLinkedList::~MyLinkedList(){
 int MyLinkedList::length(){
     return this->size;
 }
-
+//Complejidad: O(1)
 int MyLinkedList::len(){
     return this->lens;
 }
@@ -79,7 +80,7 @@ void MyLinkedList::insertLast(FailedRequest* request){
     }
     this->size++;
 }
-
+//Complejidad: O(1)
 void MyLinkedList::insertLast(string ip, int accessNumber){
     if (this->size == 0){
         head = new MyNodoLL(ip, accessNumber);
