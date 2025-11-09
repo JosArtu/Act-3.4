@@ -61,4 +61,6 @@ void SearchSystem::printRequests(MyLinkedList* list){
         current = current->next;
     }
     cout << endl;
+
+    delete list;
 }
