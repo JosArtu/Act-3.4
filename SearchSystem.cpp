@@ -1,3 +1,7 @@
+// José Arturo Mitre García A00228334
+// Alejandro Moctezuma Manrique A01614778
+// Isaac Esaú Vega Reynaga A01647044
+
 #include "SearchSystem.h"
 #include <iostream>
 //Complejidad: Mejor de los casos: O(log n), peor de los casos: O(n)

@@ -1,3 +1,7 @@
+// José Arturo Mitre García A00228334
+// Alejandro Moctezuma Manrique A01614778
+// Isaac Esaú Vega Reynaga A01647044
+
 #ifndef MYBST_H
 #define MYBST_H
 
