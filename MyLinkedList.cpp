@@ -22,7 +22,7 @@ MyLinkedList::MyLinkedList(int len):lens(len){
 MyLinkedList::~MyLinkedList(){
     MyNodoLL* actualNode = head;
     MyNodoLL* nextNode;
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < this->size; i++)
     {
         nextNode = actualNode->next;
         delete actualNode;
